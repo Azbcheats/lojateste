@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZB Cheats - Início</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AZB Cheats</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#" onclick="mostrarCarrinho()">Carrinho (<span id="contadorCarrinho">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Descrição da Loja de Cheats AZB Cheats</h2>
+            <p>Bem-vindo à AZB Cheats, sua fonte confiável para soluções de cheats e aprimoramentos no jogo Valorant! Nossa loja é dedicada a fornecer ferramentas de alta qualidade que ajudam os jogadores a alcançarem o próximo nível de desempenho e diversão.</p>
+            <p>Na AZB Cheats, entendemos que cada jogador busca se destacar em um ambiente competitivo. Por isso, oferecemos uma seleção variada de cheats projetados especificamente para Valorant.</p>
+            <p><strong>Por que escolher a AZB Cheats?</strong></p>
+            <ul>
+                <li><strong>Segurança:</strong> Nossos cheats são testados rigorosamente para garantir que você jogue com segurança e sem preocupações.</li>
+                <li><strong>Suporte ao Cliente:</strong> Nossa equipe de suporte está disponível para ajudar com qualquer dúvida ou problema que você possa encontrar.</li>
+                <li><strong>Facilidade de Uso:</strong> Todos os nossos produtos são projetados para serem fáceis de instalar e usar, permitindo que você entre no jogo rapidamente.</li>
+            </ul>
+            <p>Transforme sua experiência em Valorant e alcance suas metas de jogo com a AZB Cheats. Junte-se a nós e descubra um novo nível de jogabilidade!</p>
+            <img src="azbcheats.png" alt="Logo do Valorant" style="max-width: 20%; height: auto; margin-top: 20px;">
+            
+            <button onclick="window.location.href='https:https:'//discord.gg/rGKyWVHNeY'" style="margin-top: 20px; padding: 10px 15px; font-size: 16px; display: flex; align-items: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Discord_logo.svg" alt="Discord" style="width: 24px; height: 24px; margin-right: 10px;">
+                Junte-se ao nosso Discord
+            </button>
+        </section>
+    </main>
+</body>
+</html><script>
+    let carrinho = []; // Array para armazenar os produtos no carrinho
+    let contadorCarrinho = document.getElementById("contadorCarrinho");
+
+    function adicionarAoCarrinho(produto) {
+        carrinho.push(produto); // Adiciona o produto ao carrinho
+        contadorCarrinho.innerText = carrinho.length; // Atualiza o contador do carrinho
+        alert(produto + " foi adicionado ao carrinho!"); // Mensagem de confirmação
+    }
+
+    function mostrarCarrinho() {
+        if (carrinho.length === 0) {
+            alert("Seu carrinho está vazio.");
+        } else {
+            alert("Itens no carrinho: " + carrinho.join(", "));
+        }
+    }
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZB Cheats - Loja de Cheats</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-qrcode/1.0.0/jquery.qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AZB Cheats</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#" onclick="mostrarCarrinho()">Carrinho (<span id="contadorCarrinho">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Produtos Disponíveis</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="valorant.png" alt="Aim Color Diário">
+                <h3>Aim Color Diário</h3>
+                <p>Preço: R$ 28,00</p>
+                <button onclick="adicionarAoCarrinho('Aim Color Diário', 28)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="valorant.png" alt="Aim Color Semanal">
+                <h3>Aim Color Semanal</h3>
+                <p>Preço: R$ 49,90</p>
+                <button onclick="adicionarAoCarrinho('Aim Color Semanal', 49.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="valorant.png" alt="Aim Color Mensal">
+                <h3>Aim Color Mensal</h3>
+                <p>Preço: R$ 120,00</p>
+                <button onclick="adicionarAoCarrinho('Aim Color Mensal', 120)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div id="carrinho" class="escondido">
+            <h2>Seu Carrinho</h2>
+            <ul id="listaCarrinho"></ul>
+            <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+        <div id="checkout" class="escondido">
+            <h2>Checkout</h2>
+            <div id="qrcode"></div>
+            <p>CPF: 44531319842</p>
+            <button onclick="gerarQRCode()">Gerar QR Code</button>
+            <button onclick="resetarCarrinho()">Voltar</button>
+        </div>
+        <p id="carrinhoMensagem" class="escondido">Produto adicionado ao carrinho!</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
